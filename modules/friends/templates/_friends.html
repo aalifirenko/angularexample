@@ -1,0 +1,13 @@
+<h2>Your Friends</h2>
+<button class="btn" ng-click="logout()">Logout</button>
+
+<table class="table table-hover" style="margin-top: 50px">
+    <tr>
+        <th ng-click="order('first_name')">First Name</th>
+        <th ng-click="order('last_name')">Last Name</th>
+    </tr>
+    <tr ng-repeat="(num, user) in users | orderBy:predicate:reverse" ng-show="user.first_name !== 'DELETED'">
+        <td>{{ user.first_name }}</td>
+        <td>{{ user.last_name }}</td>
+    </tr>
+</table>

@@ -1,0 +1,4 @@
+/* Fix ui-bootstrap problem with modal */
+.modal {
+    display: block;
+}
